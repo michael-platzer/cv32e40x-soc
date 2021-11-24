@@ -8,9 +8,6 @@
 main:
     la              a0, vdata_start
     la              a1, vdata_end
-    
-    li              t0, 13
-    vsetvli         t0, t0, e32,m4
 
 loop:
     lw              t0, (a0)
