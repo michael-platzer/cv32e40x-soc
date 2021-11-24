@@ -146,8 +146,7 @@ int main(int argc, char **argv) {
             top->rst_ni = 1;
             top->eval();
 
-            //int end_cnt = 0;
-            int end_cnt = 1;
+            int end_cnt = 0;
             while (end_cnt < extra_cycles) {
                 // read memory request
                 int addr = (top->mem_addr_o % mem_sz) & ~(mem_w/8-1);
@@ -184,6 +183,7 @@ int main(int argc, char **argv) {
                 // log data
                 log_cycle(tfp);
 
+                // start simulation end count once the core requests address 0
                 if (end_cnt > 0 || (top->mem_req_o == 1 && top->mem_addr_o == 0)) {
                     end_cnt++;
                 }

@@ -17,7 +17,7 @@ loop:
     addi            a0, a0, 4
     bne             a0, a1, loop
 
-    jr              x0
+    jr              x0              # jump to address 0 (ends simulation)
 
 
     .data
