@@ -17,3 +17,7 @@
 *.bit
 *.mcs
 *.vmem
+
+# Ignore CSV, logs, and similar
+*.csv
+*.log
